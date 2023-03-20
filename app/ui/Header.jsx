@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 
@@ -16,7 +17,12 @@ const Header = () => {
           <div className="header-location__content">
             <div className="header-location__box">
               <div>
-                <img src="./svg/location.svg" alt="location" />
+                <Image
+                  width={24}
+                  height={24}
+                  src="./svg/location.svg"
+                  alt="location"
+                />
                 <p className="header-location__gps">
                   Shahar: <span>Toshkent</span>
                 </p>
@@ -45,7 +51,12 @@ const Header = () => {
                   id="lang-uzb"
                   data-name="uzb"
                 >
-                  <img src="./svg/uzb.svg" alt="uzb-img language" />
+                  <Image
+                    width={20}
+                    height={20}
+                    src="./svg/uzb.svg"
+                    alt="uzb-img language"
+                  />
                   <p className="header-location__language">O'zbekcha</p>
                 </div>
                 <div
@@ -53,7 +64,12 @@ const Header = () => {
                   className="header-location__language-russian"
                   data-name="ru"
                 >
-                  <img src="./svg/rus.svg" alt="rus-img language" />
+                  <Image
+                    width={20}
+                    height={20}
+                    src="./svg/rus.svg"
+                    alt="rus-img language"
+                  />
                   <p className="header-location__language">Русский</p>
                 </div>
               </div>
@@ -65,7 +81,9 @@ const Header = () => {
         <div className="header__wrapper">
           <div className="header__content">
             <Link href={"/"} className="flex items-center justify-center">
-              <img
+              <Image
+                width={215}
+                height={40}
                 src="./svg/logo.svg"
                 className="cursor-pointer"
                 alt="uzum logo"

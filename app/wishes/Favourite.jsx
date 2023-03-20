@@ -71,8 +71,7 @@ function FavoriteProducts() {
           rating={product.rating}
           isFav={product.isFavorite}
           id={product.id}
-          favouriteProducts={favouriteProducts}
-          setFavouriteProducts={setFavouriteProducts}
+          handleFavoriteClick={handleFavoriteClick}
         />
       ))}
     </>

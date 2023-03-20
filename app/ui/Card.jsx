@@ -1,6 +1,7 @@
 "use client";
 
-import React from "react";
+import Image from "next/image";
+import React, { useEffect, useState } from "react";
 
 const Card = ({
   image,
@@ -9,9 +10,11 @@ const Card = ({
   rating,
   isFav,
   id,
-  favouriteProducts,
-  setFavouriteProducts,
+  handleFavoriteClick,
 }) => {
+  const [randomNum, setRandomNum] = useState();
+
+  useEffect(() => setRandomNum(Math.round(Math.random() * 1000)), []);
   return (
     <li className="top-products__item" key={id} title={title}>
       <button
@@ -53,7 +56,13 @@ const Card = ({
         </svg>
       </button>
       <div className="top-products__imagebox">
-        <img className="top-products__img" src={image} alt={title} />
+        <Image
+          width={232}
+          height={309}
+          className="top-products__img"
+          src={image}
+          alt={title}
+        />
       </div>
       <div className="top-products__box">
         <p className="top-products__name">{title}</p>
@@ -71,7 +80,7 @@ const Card = ({
             />
           </svg>
           <span>
-            {rating} ({String(Math.round(Math.random() * 1000)) + " baho"})
+            {rating} ({randomNum} baho)
           </span>
         </p>
         <p className="top-products__monthly">
