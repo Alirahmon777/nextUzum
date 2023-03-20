@@ -7,6 +7,8 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Image from "next/image";
 
+Swiper.displayName = "Swiper";
+
 export default () => {
   return (
     <section className="hero mt-2 ">

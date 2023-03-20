@@ -281,4 +281,6 @@ const Header = () => {
   );
 };
 
+Header.displayName = "Header";
+
 export default Header;

@@ -18,4 +18,6 @@ const page = () => {
   );
 };
 
+page.displayName = "page";
+
 export default page;
