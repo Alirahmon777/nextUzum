@@ -85,13 +85,13 @@ const Card = ({
         </p>
         <p className="top-products__monthly">
           <mark>
-            <span>{Math.floor((price * 360) / 30)}</span> so‘m/oyiga
+            <span>{Math.floor((price * 360) / 30)}</span> so&lsquo;m/oyiga
           </mark>
         </p>
         <div className="top-products__bottom">
           <div className="top-products__prices">
-            <p className="top-products__subprice">{price * 130} so‘m</p>
-            <p className="top-products__price">{price * 100} so‘m</p>
+            <p className="top-products__subprice">{price * 130} so&lsquo;m</p>
+            <p className="top-products__price">{price * 100} so&lsquo;m</p>
           </div>
           <button
             id="button-basket"
