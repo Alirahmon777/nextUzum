@@ -33,6 +33,7 @@ async function Products() {
           <ul className="top-products__list">
             {datas.map((data) => (
               <Card
+                key={data.id}
                 title={data.name}
                 image={data.image}
                 price={data.price}
@@ -47,7 +48,7 @@ async function Products() {
               className="top-products__addbtn"
               value="show-other-products"
             >
-              Yana ko‘rsatish 20
+              Yana ko&lsquo;rsatish 20
             </button>
           </div>
         </div>

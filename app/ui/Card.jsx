@@ -28,7 +28,7 @@ const Card = ({
         title={
           isFav
             ? title + "ni saralanganlardan chiqarish"
-            : title + "ni saralanganlarga qo'shish"
+            : title + "ni saralanganlarga qo‘shish"
         }
       >
         <div className="top-products__ripple"></div>
@@ -85,13 +85,13 @@ const Card = ({
         </p>
         <p className="top-products__monthly">
           <mark>
-            <span>{Math.floor((price * 360) / 30)}</span> so'm/oyiga
+            <span>{Math.floor((price * 360) / 30)}</span> so‘m/oyiga
           </mark>
         </p>
         <div className="top-products__bottom">
           <div className="top-products__prices">
-            <p className="top-products__subprice">{price * 130} so'm</p>
-            <p className="top-products__price">{price * 100} so'm</p>
+            <p className="top-products__subprice">{price * 130} so‘m</p>
+            <p className="top-products__price">{price * 100} so‘m</p>
           </div>
           <button
             id="button-basket"

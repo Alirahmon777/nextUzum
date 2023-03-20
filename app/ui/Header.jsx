@@ -57,7 +57,7 @@ const Header = () => {
                     src="./svg/uzb.svg"
                     alt="uzb-img language"
                   />
-                  <p className="header-location__language">O'zbekcha</p>
+                  <p className="header-location__language">O&lsquo;zbekcha</p>
                 </div>
                 <div
                   id="lang-ru"
@@ -230,7 +230,7 @@ const Header = () => {
               </li>
               <li className="header__item">
                 <a href="#" className="header__link">
-                  Go'zallik
+                  Go&lsquo;zallik
                 </a>
               </li>
               <li className="header__item">
@@ -240,12 +240,12 @@ const Header = () => {
               </li>
               <li className="header__item">
                 <a href="#" className="header__link">
-                  Uy-ro'zg'or buyumlari
+                  Uy-ro&lsquo;zg&lsquo;or buyumlari
                 </a>
               </li>
               <li className="header__item">
                 <a href="#" className="header__link">
-                  Qurilish va ta'mirlash
+                  Qurilish va ta&lsquo;mirlash
                 </a>
               </li>
               <li className="header__item">
