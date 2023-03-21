@@ -36,7 +36,11 @@ const Header = () => {
               Buyurtmangizni 1 kunda bepul yetkazib beramiz!
               <span>
                 Copied from
-                <a href="https://uzum.uz/" target="_blank">
+                <a
+                  href="https://uzum.uz/"
+                  className="text-red-600"
+                  target="_blank"
+                >
                   uzum.uz
                 </a>
                 site
@@ -141,7 +145,7 @@ const Header = () => {
             </div>
             <ul className="header-login__list">
               <li id="login-sign" className="header-login__item">
-                <a href="#">
+                <a>
                   <svg
                     width="24"
                     height="24"
@@ -160,7 +164,7 @@ const Header = () => {
                 </a>
               </li>
               <li className="header-login__item">
-                <Link href="/wishes">
+                <a>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -176,10 +180,10 @@ const Header = () => {
                     />
                   </svg>
                   <p>Saralangan</p>
-                </Link>
+                </a>
               </li>
               <li className="header-login__item">
-                <a href="./pages/basket.html">
+                <a>
                   <svg
                     width="24"
                     height="24"
@@ -280,6 +284,5 @@ const Header = () => {
     </header>
   );
 };
-
 
 export default Header;

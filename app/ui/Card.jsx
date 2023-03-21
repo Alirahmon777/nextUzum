@@ -1,7 +1,9 @@
 "use client";
 
+import { Inter } from "next/font/google";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
+const inter = Inter({ subsets: ["latin"] });
 
 const Card = ({ image, title, price, rating, isFav, id }) => {
   const [randomNum, setRandomNum] = useState();
@@ -75,7 +77,7 @@ const Card = ({ image, title, price, rating, isFav, id }) => {
           </span>
         </p>
         <p className="top-products__monthly">
-          <mark>
+          <mark className={inter.className}>
             <span>{Math.floor((price * 360) / 30)}</span> so&lsquo;m/oyiga
           </mark>
         </p>
