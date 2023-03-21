@@ -3,22 +3,13 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
-const Card = ({
-  image,
-  title,
-  price,
-  rating,
-  isFav,
-  id,
-  handleFavoriteClick,
-}) => {
+const Card = ({ image, title, price, rating, isFav, id }) => {
   const [randomNum, setRandomNum] = useState();
 
   useEffect(() => setRandomNum(Math.round(Math.random() * 1000)), []);
   return (
     <li className="top-products__item" key={id} title={title}>
       <button
-        onClick={() => handleFavoriteClick(id)}
         id="favorite-btn"
         className={
           isFav
@@ -123,6 +114,5 @@ const Card = ({
     </li>
   );
 };
-
 
 export default Card;
