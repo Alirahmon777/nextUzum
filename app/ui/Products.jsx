@@ -4,7 +4,7 @@ async function Products() {
   const response = await fetch(process.env.NEXT_PUBLIC_BASE_URL + "fakeapi", {
     cache: "no-store",
   });
-  const datas = await response.json();
+  const datas = await response?.json();
 
   return (
     <section className="top-products">
