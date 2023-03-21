@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -145,7 +145,7 @@ const Header = () => {
             </div>
             <ul className="header-login__list">
               <li id="login-sign" className="header-login__item">
-                <a>
+                <a href="#">
                   <svg
                     width="24"
                     height="24"
@@ -164,7 +164,7 @@ const Header = () => {
                 </a>
               </li>
               <li className="header-login__item">
-                <a>
+                <a href="#">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -183,7 +183,7 @@ const Header = () => {
                 </a>
               </li>
               <li className="header-login__item">
-                <a>
+                <a href="#">
                   <svg
                     width="24"
                     height="24"

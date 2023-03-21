@@ -26,7 +26,6 @@ const Card = ({ image, title, price, rating, isFav, id }) => {
       >
         <div className="top-products__ripple"></div>
         <svg
-          data-v-56571d0e=""
           width="20"
           height="20"
           viewBox="0 0 20 20"
@@ -92,7 +91,6 @@ const Card = ({ image, title, price, rating, isFav, id }) => {
             title={title + "ni savatga qo'shish"}
           >
             <svg
-              data-v-56571d0e=""
               width="24"
               height="24"
               viewBox="0 0 24 24"
