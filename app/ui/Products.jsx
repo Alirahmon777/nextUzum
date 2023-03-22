@@ -1,13 +1,64 @@
+"use client";
 import Card from "./Card";
+import { useEffect, useContext } from "react";
+import { FavoriteContext } from "../contexts/isFavorite";
+import { SetDataContext } from "../contexts/setDatas";
+import { ToastContainer } from "react-toastify";
+import { toastSuccess, toastError } from "../utils/toaster";
+import "react-toastify/dist/ReactToastify.css";
 
-async function Products() {
-  const response = await fetch(process.env.NEXT_PUBLIC_BASE_URL + "fakeapi", {
-    cache: "no-store",
-  });
-  const datas = await response?.json();
+export default function Products() {
+  const { datas, setDatas } = useContext(SetDataContext);
+  const { setFavouriteProducts } = useContext(FavoriteContext);
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  async function handleFavoriteClick(id) {
+    datas.filter(async (product) => {
+      if (product.id == id) {
+        try {
+          const res = await fetch(
+            `${process.env.NEXT_PUBLIC_BASE_URL}fakeapi/${id}`,
+            {
+              method: "put",
+              body: JSON.stringify({
+                ...product,
+                isFavorite: !product.isFavorite,
+              }),
+              headers: {
+                "Content-Type": "application/json",
+              },
+              cache: "force-cache",
+            }
+          );
+          const data = await res.json();
+          getData();
+        } catch (error) {
+          console.log(error);
+        } finally {
+          if (!product.isFavorite) {
+            toastSuccess(`${product.name} sevimlilarga qo'shildi`);
+          } else {
+            toastError(`${product.name} sevimlilardan chiqarildi`);
+          }
+        }
+      }
+    });
+  }
+
+  async function getData() {
+    const res = await fetch(process.env.NEXT_PUBLIC_BASE_URL + "fakeapi");
+
+    const data = await res?.json();
+    setDatas(data);
+    setFavouriteProducts(data);
+  }
 
   return (
     <section className="top-products">
+      <ToastContainer />
       <div className="container">
         <div className="top-products__wrapper">
           <a className="top-products__link" href="#">
@@ -40,6 +91,7 @@ async function Products() {
                 rating={data.rating}
                 isFav={data.isFavorite}
                 id={data.id}
+                handleFavoriteClick={handleFavoriteClick}
               />
             ))}
           </ul>
@@ -56,5 +108,3 @@ async function Products() {
     </section>
   );
 }
-
-export default Products;

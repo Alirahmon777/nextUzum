@@ -9,7 +9,7 @@ import Image from "next/image";
 
 function Swipper() {
   return (
-    <section className="hero mt-2 ">
+    <section className="hero mt-2">
       <div className="container">
         <Swiper
           modules={[Navigation, Pagination, A11y, Autoplay]}
@@ -19,7 +19,10 @@ function Swipper() {
           speed={200}
           autoHeight={true}
           loop
-          autoplay={true}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
           pagination={{ clickable: true }}
           className="rounded-xl"
         >

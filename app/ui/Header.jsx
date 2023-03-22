@@ -88,7 +88,7 @@ const Header = () => {
               <Image
                 width={215}
                 height={40}
-                src="./svg/logo.svg"
+                src="/svg/logo.svg"
                 className="cursor-pointer"
                 alt="uzum logo"
               />
@@ -164,7 +164,7 @@ const Header = () => {
                 </a>
               </li>
               <li className="header-login__item">
-                <a href="#">
+                <Link href={"/wishes"}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -180,7 +180,7 @@ const Header = () => {
                     />
                   </svg>
                   <p>Saralangan</p>
-                </a>
+                </Link>
               </li>
               <li className="header-login__item">
                 <a href="#">

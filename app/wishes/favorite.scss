@@ -1,0 +1,80 @@
+.favorite {
+  &__title {
+    font-family: "Roboto";
+    margin-top: 35px;
+    font-weight: 500;
+    font-style: 24px;
+    line-height: 1;
+  }
+
+  &__filter {
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 4px;
+    border-bottom: 1px solid #00000022;
+  }
+
+  &__text {
+    font-size: 14px;
+    color: #717171;
+    margin-right: 10px;
+  }
+
+  &__filterbox {
+    font-size: 14px;
+    position: relative;
+    display: flex;
+    width: 200px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 19.5px 10px 24px;
+    background: #ffffff;
+    box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.0532439);
+    border-radius: 5px;
+    border: 1px solid transparent;
+    cursor: pointer;
+  }
+
+  &__btns {
+    position: absolute;
+    top: 108%;
+    left: 0;
+    width: 200px;
+    display: flex;
+    pointer-events: none;
+    flex-direction: column;
+
+    background: #ffffff;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.0532439);
+    border-radius: 8px;
+    overflow: hidden;
+    z-index: 100;
+    transition: all 0.2s ease-in-out;
+    opacity: 0;
+  }
+
+  &__btn {
+    padding: 10px 0 10px 24px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #111517;
+    border: none;
+    outline: none;
+    background: #ffffff;
+    cursor: pointer;
+    text-align: left;
+    border-bottom: 1px solid #dbdbdb;
+
+    &:hover {
+      background-color: #dbdbdb;
+    }
+  }
+
+  &__btn:last-child {
+    border-bottom: none;
+  }
+}

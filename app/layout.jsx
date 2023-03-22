@@ -1,12 +1,10 @@
-import "../styles/globals.css";
+import { Roboto } from "next/font/google";
+import Header from "./ui/Header";
+import "../styles/globals.scss";
 import "./header.scss";
 import "./card.scss";
-
-import Header from "./ui/Header";
-
-import { Inter, Roboto } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
+import FavoriteContextProvider from "./contexts/isFavorite";
+import SetDataContextProvider from "./contexts/setDatas";
 const roboto = Roboto({ subsets: ["latin"], weight: "400" });
 
 export const metadata = {
@@ -18,10 +16,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={roboto.className}>
-        <Header />
-        {children}
-      </body>
+      <FavoriteContextProvider>
+        <SetDataContextProvider>
+          <body className={roboto.className}>
+            <Header />
+            {children}
+          </body>
+        </SetDataContextProvider>
+      </FavoriteContextProvider>
     </html>
   );
 }

@@ -1,17 +1,25 @@
 "use client";
-
 import { Inter } from "next/font/google";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 const inter = Inter({ subsets: ["latin"] });
 
-const Card = ({ image, title, price, rating, isFav, id }) => {
+const Card = ({
+  image,
+  title,
+  price,
+  rating,
+  isFav,
+  id,
+  handleFavoriteClick,
+}) => {
   const [randomNum, setRandomNum] = useState();
 
   useEffect(() => setRandomNum(Math.round(Math.random() * 1000)), []);
   return (
-    <li className="top-products__item" key={id} title={title}>
+    <li className="top-products__item" title={title}>
       <button
+        onClick={() => handleFavoriteClick(id)}
         id="favorite-btn"
         className={
           isFav

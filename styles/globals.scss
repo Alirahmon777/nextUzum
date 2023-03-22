@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Inter";
+  background-color: #fff;
+}
+
+.to-top {
+  position: fixed;
+  bottom: -5px;
+  right: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  text-decoration: none;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all 0.2s ease-in-out;
+  z-index: 110;
+}
+
+.to-top.active {
+  bottom: 32px;
+  pointer-events: auto;
+  opacity: 1;
+  visibility: visible;
+  cursor: pointer;
+}
+
+.swiper {
+  overflow: hidden;
+  border-radius: 14px;
+
+  &-wrapper &-slide img {
+    width: 1240px;
+    border-radius: 14px;
+  }
+
+  &-button-prev,
+  &-button-next {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: 0.6;
+  }
+
+  &-button-prev::after,
+  &-button-next::after {
+    font-size: 20px;
+    font-weight: 500;
+    color: #000;
+  }
+
+  &-pagination-bullet {
+    width: 6px;
+    height: 6px;
+    background: #ffffffad;
+    opacity: 0.5;
+    margin-right: 0 !important;
+  }
+
+  &-pagination-bullet-active {
+    width: 6px;
+    height: 6px;
+    background: #ffffffad;
+    opacity: 1;
+    margin-right: 0 !important;
+  }
+}

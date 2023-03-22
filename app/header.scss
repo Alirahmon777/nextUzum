@@ -12,38 +12,28 @@
       }
 
       &__box {
-        color: #141415;
-        display: flex;
-        align-items: center;
-        gap: 20px;
+        @apply text-[#141415] flex items-center gap-5;
       }
 
       #admin-link,
       #home-link {
-        display: none;
-        font-weight: 500;
-        text-decoration: underline;
+        @apply hidden font-medium underline;
       }
 
       #home-link {
-        display: block;
+        @apply block;
       }
 
       &__box div:first-child {
-        display: flex;
-        align-items: center;
-        gap: 5px;
+        @apply flex items-center gap-[5px];
       }
 
       &__transfer {
-        font-weight: 500;
-        cursor: pointer;
+        @apply font-medium cursor-pointer;
       }
 
       &__gps span {
-        font-weight: 500;
-        cursor: pointer;
-        text-decoration: underline;
+        @apply font-medium cursor-pointer underline;
       }
 
       &__order {
@@ -365,7 +355,7 @@
     background: rgba(49, 49, 196, 0.15);
   }
   header .show-catalog:hover .catalog-icon .rect .inner {
-    background: #E0E0F6;
+    background: #e0e0f6;
   }
 
   header .show-catalog .before {
