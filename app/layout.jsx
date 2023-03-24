@@ -11,40 +11,40 @@ export const metadata = {
   icons: {
     icon: [
       {
-        url: "/_next/static/media/metadata/favicon/favicon.ico",
+        url: "/favicon/favicon.ico",
         type: "image/x-icon",
         sizes: "any",
       },
     ],
-    maskIcon: "/_next/static/media/metadata/favicon/safari-pinned-tab.svg",
-    shortcut: "/_next/static/media/metadata/favicon/shortcut-icon.png",
+    maskIcon: "/favicon/safari-pinned-tab.svg",
+    shortcut: "/favicon/shortcut-icon.png",
     other: [
       {
         rel: "apple-touch-icon",
-        url: "/_next/static/media/metadata/favicon/apple-touch-icon.png",
+        url: "/favicon/apple-touch-icon.png",
         sizes: "120x120",
       },
       {
         rel: "mask-icon",
-        url: "/_next/static/media/metadata/favicon/safari-pinned-tab.svg",
+        url: "/favicon/safari-pinned-tab.svg",
         color: "#5bbad5",
       },
       {
         rel: "icon",
-        url: "/_next/static/media/metadata/favicon/favicon-32x32.png",
+        url: "/favicon/favicon-32x32.png",
         sizes: "32x32",
         type: "image/png",
       },
       {
         rel: "icon",
-        url: "/_next/static/media/metadata/favicon/favicon-16x16.png",
+        url: "/favicon/favicon-16x16.png",
         sizes: "16x16",
         type: "image/png",
       },
     ],
   },
 
-  manifest: "/_next/static/media/metadata/favicon/site.webmanifest",
+  manifest: "/favicon/site.webmanifest",
   description:
     "Katta miqdorda chegirmali mahsulotlar: elektronika, maishiy texnika, bolalar tovarlari, kiyim-kechak va poyabzal, uy, sport, goʻzallik va sogʻliq uchun hamma mahsulotlar, kitoblar, uy hayvonlari uchun tovarlar va boshqalar. 12 oylik muddatli toʻlov. 1 kunda yetkazib berish. Uzum Marketda har kuni chegirmalar va aktsiyalar!",
 };
